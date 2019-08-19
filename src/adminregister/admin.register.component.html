@@ -1,0 +1,50 @@
+<br><a class="btn btn-outline-primary" style="margin-left:50px;" href="javascript:void(0)" (click)="goBack()"> Go back</a>
+<br><div style="margin-left:300px;"><div class="card" style="width: 25rem;">
+<form class="text-center border border-light p-5" 
+(ngSubmit)="save(registerForm)"
+ novalidate
+ #registerForm="ngForm">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX///8AAAD6+vrn5+fLy8teXl739/fu7u55eXlDQ0NXV1fZ2dn09PTq6uomJiaTk5Pg4ODDw8PR0dG3t7cQEBCFhYXHx8cYGBixsbGioqJJSUlRUVFwcHCqqqppaWk4ODiampp+fn4gICAwMDCKioo+Pj4NDQ1jY2M1NTUsLCwXFxdbRoP/AAAIhElEQVR4nO2deXuiMBDGhXrUgotnvRUtVu33/4BboSogDDlmktGH31+7W9vmXUIyVyaNRk1NTU1NTU1NDUB/MF8tt/8unA+taNZs2x4RIm4//HAeGe9Gvu2hoeBNvgrk/dFad2yPTxN33S2Xl7DxbA9SA3deJS9m8Wl7oIoI6ruwfMrn2ARev0fen2/RWcno++V7YHvEcgy/JQX+snJtj1oC8TcwzenN9riFkZ2hN55lUV2oCnScke2xi+BrCHScue3hV+NqCXwGiUs9gfwn6lFXoOMMbWsACfQFOk7PtgqATwyBzta2jHI6YxSFzsS2kFJaOAL57vwjLIHOF08T1UWaoxcC22IKifAEOg7H8M0bpkBnY1tOAe+oCh1+nlQHV6Czsi3oARRrJg27h4gtkN1yOkBXyG1PRDNn7vDyMToKsbUqdrZFZcCfpI7zY1tUBuTNMKFvW1UKd0uhcG1bVooehUDnaFtWChzfPs/UtqwU6AZNAiMHg2ShYbUjVqay1WCUcEP07tMwin/TCOQUcyNS+G5b1x0ihXw2RNwQzZ0P28JuvL7C15+l9UqjCqPdYkqjkNGOr5m7L4OR1fb6lndIo5CR90QRiOLlAWMnLRI45Z/cA4VCTpGo148mkryInF5Dmqg+I4vmwstnZgim6ZZZdg3f+A5tK8qDHhRmV7/3+pUKuAVDDAsVsB8iw0eI/CYycivuuD94AkPbYorB2xPZVglvsBQyM2fu+EgRKWYWaZomisCubRkQaofWsvywXEdvKB9bu8P2JfxD+1QQoyBpCUXNBSTgfuzpF1frKT6BwIbWU3wOgY3GTlUg42P5n83MX9dK+rpZjynk1P1knffnvH/yAnOWTORs+WyMk9/xTbNNEVzpGHF2FsS2w5jLrE3OjX7l+j4MT1IPMBdZmyX/zGJz9K9L5ynf2mItbIi38gH82fUrM1MyynHvVXtf+femLWamfjzYaamVynp6xk9nnX4ecymjyqzU++M3ZeIhlk+W+DkBBe+NFwAiW6OCLSFnvVuV2H4oUSgsn3ibr/aP6rqTQdF20Hv4mTbfxYKn0yrep93OYB5strHQ7WIVzryS/byoZNyexOKEk84KX7KN2to0doWj0emI9Hku+ZF2tv7yrWCqtsR3ymN1UxttpMCo00k+FOGCMfMFgYIKqmpKF3Ia/aqiI+OJDIH6kuVIOIv7NqnOCJg2boRch30kVDAyEisCMFt8Itwg4iuEB+YOhN2svcnEvlSucPq+7hcthW5vGEiFdEy+itL1pPvlKhwMvb5/odf3hrPoKF8pZi5OpR67/x7/ovzdjqld0VMfoiYtQwqJap5FMDNP1UKFOOxNRBh9iwLNHNJHyJ/pQO9lDO0KNGCCa+cHdaH2hvH6eamyJ1ZYEFEyDe1ZoVn1AMgh3TFcBo+QtiQMo5gEAbqH6Eo1IacjJFPI4S2MIVNIcvZHBaogOM0JNRW+iBRa9Jry0DQ47duWlYLGFSY6CqsGRWjRrl+YJyJQyGariPkmUGjdbcqC70RxWmcu4HcFIWrnpQ56SZhCoRot2HaNvShwGUtkhcgn0zBAPt1G1L1EB9xohs2VdD+ZD7y39iOoCq059y1TNwjacSu+A2OHgXsEDQWqCQwW0dD0J4VZGj0JbMFxSq+Ufn8WRJtWOZsomBXWCghD1L0T4G5YtwcbsSjtdFNUrCoGTYMdiFsOzY9kduKfQFGj8RDUzYOXb0AVKik0bbJdS+I8lSbaW5UAh+E46dVrUC0YUChnQB1/JdfSJ/UWadK172Y9p2vyTMfllo1Tmc37/s1RPUtYslTT6ELz105BtyBCrn7XqNmdbPXtiuK37aLCCpArDDeZ+D0nvxI0E7vx/4K3A3+QTHdXqi7BhSTmKLi23cqi4A4OEtui0RqhxKGAyqJT3RRBW0sioGrSZksqnsCYSboWGpzM4vVhJmPByVngSeUn/gBns/imaLJUL8l8Qp/I5Ct8KE59Eq58J2gYWEo8s8AXPzv3QMdVeK0x6P6O410MNGey6Qqw1l80oArOBGTO1ZNGQqHolkhzD1Axp+pJI6FQtBTV5IYf909qg5NGQuFUcKkxGdCPFXbAU14SCh1BhTjdrcToVk8aAoUmTRo7Ck0mZWqFDolCop75hdhRCJnB2NhRaDJKI60QDrA8icJFMPJSZEfdT32lOZvkbIXnmKVylaTZRUNQobchujdORKF0L4VMbFf8aHRzZyhz8aBQ/qRa+ilKHf7uz004wnmFChc+ual8o/Tx9s+I+rxFXmGzakgF7DQUNi4p52hBWJeRV6hSrJB6E1VbFHSG4aasjwyuwm+VcpqUp6DThKHdGwQEL2b+Gaqkc1N5Vf02E53R/Iia1MgrVOlnkjLkkBpptL1BcOziCM0rVOgKnQ5JoLYK8fveOlotNYVucwqdUHogaVucohmK6/easzDaKBRRnFqTMK4xyFhtsvM0szhQt3vpec3R6FKudfw4HLb/zufzv3FM/MfT4bA8HqNoNht9DjNrZtYu/ZAwa9xBtrzIwk01cfOWKlMz7z3tP97vrLLfHaS/9HAihNtdPFdk/EP4mMsrKETx8Y1TK0xTK+TJ6yv0QcPoFRQ2QD9bQuHZ0virwcqQMrq4PAdYJSOhkO+FPGC1p4RCvldJgIupRLUJw8vprkBLTaZiqA190kLbWmGglGWmlgusMbDerx4AbG6Q/uAO+qCN5srCQCNPdd0DC/f4rqQXwIcYXj8F18GwNWgSwMMkrXg97cDpdwYXY8DAznt3s6noz2uq06k6mp1Uxnwu4SlF76AOq2vZy9CpNuN+/d4f6mcEuFyiVElP6j6lG4cneAdvqFS6UPRXIqQvm6Q8PsUak8GTOQyxej59MaOVSDH9v9WAuaEG0vOaMMNnWl5qampqampqiPkP68mT+QFpty8AAAAASUVORK5CYII=" alt="..." style="width:80px;">
+    <h5 class="card-header">Regitser</h5>
+
+    <!--UserName-->
+    <input type="text"
+     id="firstName" 
+     class="form-control mb-4"
+      placeholder="UserName"
+      required
+      [(ngModel)]="admin.username"
+      name="username"
+      #userNameVar="ngModel"
+      [ngClass]="{'is-invalid':(userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }">
+        <span class="invalid-feedback">
+          <span *ngIf="userNameVar.errors?.required">
+            Please Enter UserName
+          </span>
+        </span>
+
+        <input type="password"
+        class="form-control mb-4"
+        placeholder="Password"
+        id="password"
+        required
+        [(ngModel)]="admin.password"
+        name="password"
+        #passwordVar="ngModel"
+        [ngClass]="{'is-invalid':(passwordVar.touched || passwordVar.dirty) && !passwordVar.valid}">
+        <span class="invalid-feedback">
+          <span *ngIf="passwordVar.errors?.required">
+            Please Enter Password
+          </span>
+        </span>
+
+        <button class="btn btn-success"
+        type="submit"
+         style="width:100px"
+               [title]="registerForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+              [disabled]="!registerForm.valid">
+                    Register
+            </button> 
+</form>
+            </div><br>
+            

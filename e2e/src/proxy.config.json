@@ -1,0 +1,6 @@
+{"/couriers*":{
+"target":"http://localhost:9167/couriers",
+
+"secure":false
+}
+}

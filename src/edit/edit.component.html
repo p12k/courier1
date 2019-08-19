@@ -1,0 +1,43 @@
+
+<br><br><br>
+
+<h1>{{title}}</h1>
+ <img src="../assets/list.png" style="width:800px; height: 300px; padding-left: 40px; margin-left:260px;"><br><br>
+
+    <!--custid-->
+    
+<div class="container">
+  <div class="row">
+ <table class="table table-striped" >
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        
+        <th>Email</th>
+       
+        <th>Contact</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cust of deliverlist">
+        
+        <td>{{cust.courierid}}</td>
+        <td>{{cust.name}}</td>
+       
+        <td>{{cust.email}}</td>
+       
+        <td>{{cust.contact}}</td>
+        <td>
+
+
+    
+          <!--<input  class="btn btn-danger" type="button"(click)="deleteDeliver(system)" value="delete"/>&nbsp;-->
+         <!-- <input  class="btn btn-primary" type="button" value="edit"/>-->
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

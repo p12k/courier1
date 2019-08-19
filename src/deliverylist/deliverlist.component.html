@@ -1,0 +1,60 @@
+
+<br><br><br>
+
+<h1>{{title}}</h1>
+ <img src="../assets/list.png" style="width:800px; height: 300px; padding-left: 40px; margin-left:260px;"><br><br>
+
+    <!--custid-->
+    
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search"  [(ngModel)]="term" 
+      autocomplete="off" placeholder="&#61442;  Start searching ">
+    
+   <table class="table table-striped" >
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        
+        <th>Email</th>
+       
+        <th>Mobile</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cust of deliverlist |filter:term">
+        
+        <td>{{cust.id}}</td>
+        <td>{{cust.name}}</td>
+       
+        <td>{{cust.email}}</td>
+       
+        <td>{{cust.mobile}}</td>
+        <td>
+<!--<td><button class="btn btn-danger" (click)="deletecourier(cust.id)">Delete</button>-->
+  <a class="list-group-item" href="#"  (click)="deletecourier(cust.id)"><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
+  <a class="list-group-item" href="edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></a>
+    
+          <!--<input  class="btn btn-danger" type="button"(click)="deleteDeliver(system)" value="delete"/>&nbsp;-->
+         <!-- <input  class="btn btn-primary" type="button" value="edit"/>-->
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+    <!--<div class="footer">
+
+  <footer> &copy;copy right 2019</footer>	
+
+
+  <p>There are 9 types of passenger trains, namely Gatiman Express, Rajdhani Express, Shatabdi/Janshatabdi Express, Duranto Express, Yuva /Garibrath Express, AC Express, Superfast, Mail/Express, Passengers/MEMU/DEMU. In 2015-16, an average of 13,313 passenger trains ran daily, carrying an estimated 22 million passengers a day and covering over 7,000 stations.Centre For Railway Information Systems, Designed and Hosted by CRIS
+  </p>
+
+
+</div>-->
+    </div>
+  </div>
+</div>

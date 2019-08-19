@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a id='code' class="navbar-brand" [routerLink]="['']"><i class="fa fa-truck" aria-hidden="true"></i><strong>  Courier Management System</strong></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <a *ngIf="loginservice.isUserLoggedIn" class="btn btn-outline-success" routerLink="/home" type="button">Home</a>
+
+
+     
+ <a *ngIf="loginservice.isUserLoggedIn()" class="btn btn-outline-success" routerLink="/add" type="button">Add Delivery Person</a>
+
+ <a *ngIf="loginservice.isUserLoggedIn()" class="btn btn-outline-success" routerLink="/view" type="button">View Delivery list</a>
+  <a *ngIf="loginservice.isUserLoggedIn()" class="btn btn-outline-success" routerLink="/login" type="button">Login</a>
+  <a *ngIf="loginservice.isUserLoggedIn()" class="btn btn-outline-success" routerLink="/logout" type="button">Logout</a>  
+</nav>
+
+<router-outlet></router-outlet>

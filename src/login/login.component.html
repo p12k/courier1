@@ -1,0 +1,31 @@
+<br><a class="btn btn-outline-primary" style="margin-left:50px;" href="javascript:void(0)" (click)="goBack()"> Go back</a>
+<br><br><br><div style="margin-left:300px;"><div class="card" style="width: 25rem;">
+  
+<form class="text-center border border-light p-5" novalidate
+ #registerForm="ngForm" (ngSubmit)=checkLogin()>
+
+    <img src="../assets/img7.png" style="width:200px; height: 200px;"><br><br> 
+    <h5 class="card-header">Login</h5>
+  
+
+   <br><input type="text" name="username" required class="form-control mb-4" [(ngModel)]="user.username" placeholder="UserName"#userNameVar="ngModel"
+      [ngClass]="{'is-invalid':(userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }">
+        <span class="invalid-feedback">
+          <span *ngIf="userNameVar.errors?.required">
+            Please Enter UserName
+          </span>
+        </span>
+    <br><input type="password" name="password" required class="form-control mb-4" [(ngModel)]="user.password" placeholder="Password" 
+      [ngClass]="{'is-invalid':(userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }">
+        <span class="invalid-feedback">
+          <span *ngIf="userNameVar.errors?.required">
+            Please Enter Password
+          </span>
+        </span>
+ <br>
+  <button class="btn btn-success" [disabled]="!registerForm.valid"   [title]="registerForm.valid ? 'Login' : 'Disabled until the form data is valid'">
+    Login
+  </button>
+ <a [routerLink]="['/adminregister']">New user?</a>
+</form>
+</div>
